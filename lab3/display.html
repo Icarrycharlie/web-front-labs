@@ -5,6 +5,57 @@
         <title>Гришти Маким Деринович. Дисплей</title>
         <link rel="stylesheet" href="../main.css">
         <link rel="icon" href="../пав.jpg">
+        <style>
+            div.discount div {
+                display: none;
+            }
+            h1:hover+div {
+                display: block;
+            }
+            .discount {
+                width: 300px;
+                border: 1px solid;
+                display: inline-block;
+                vertical-align: top;
+            }
+            .processor {
+                border: 3px solid black;
+                width: 400px;
+                background: white;
+                border-radius: 5px;
+                text-align: center;
+                display: grid;
+                color: green;
+                vertical-align: top 
+            }
+            div.oper div {
+                display: none;
+            }
+            h1:hover+div {
+                display: block;
+            }
+            .oper {
+                border: 3px solid black;
+                width: 400px;
+                background: linear-gradient(black, blue);
+                border-radius: 5px;
+                text-align: center;
+                display: inline-block;
+                color: white;
+                margin: 20px;
+            }
+            div.screen div {
+                display: none;
+            }
+            h1:hover+div {
+                display: block;
+            }
+            .screen {
+              border: 15px solid yellow;
+              background: linear-gradient(green,red);
+              color: chartreuse;
+            }
+        </style>
     </head>
     
     <body>
@@ -13,7 +64,43 @@
             <hr>
         </header>
         <main>
-
+            <div class="discount">
+                <h1>Дисконт в теории игр.</h1>
+                <div>
+                    В теории игр, дисконт — текущая стоимость денежной единицы будущего периода, умноженная на ве-
+                    роятность повторения игры для игр с неизвестным числом по-
+                    вторений.  
+                </div>
+            </div>
+            <div class="discount">
+                <h1>Залоговый дисконт.</h1>
+                <div>
+                    Разница между реальной рыноч-
+                    ной стоимостью залогового имущества и его залоговой стои-
+                    мостью, используемой для определения суммы выдаваемого
+                    банком кредита.
+                </div>
+            </div>
+            <div>
+                <h1>Характеристики смартфона Apple iPhone 15 Pro</h1>
+                <div class="processor">
+                    <h1>Процессор</h1>
+                    <div>6-ядерный Apple A17 Pro (3 нм)
+                    </div>
+                </div>
+                <div class="oper">
+                    <h1>Оперативная память</h1>
+                    <div>
+                        8 ГБ
+                    </div>
+                </div>
+                <div class="screen">
+                    <h1>Дисплей</h1>
+                    <div>
+                        6,1 дюйма, OLED, разрешение 2556 × 1179 пикселей, плотность точек 460 ppi, частота обновления 120 Гц.
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer>
