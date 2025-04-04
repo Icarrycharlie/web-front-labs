@@ -32,3 +32,14 @@ a:active {
     color: black;
     opacity: 0.3;
 }
+div.menu {
+    border: 1px solid;
+    border-radius: 5px;
+    width: 300px;
+    margin: 0 auto;
+    background: white;
+}
+div.menu:hover {
+    background-color: blueviolet;
+    box-shadow: 10px 10px 15px #00000030;
+}
