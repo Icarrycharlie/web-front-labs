@@ -1,5 +1,5 @@
 body {
-    background-color: fuchsia;
+    background-color: darkgray;
     color: maroon;
     font-family: arial;
     margin: 0px;
@@ -18,4 +18,16 @@ footer {
 }
 a {
     text-decoration: none; 
+}
+a:visited {
+    color: chocolate;
+}
+a:hover {
+    color: red;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+a:active {
+    color: black;
+    opacity: 0.3;
 }
