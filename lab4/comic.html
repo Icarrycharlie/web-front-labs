@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Гришти Маким Деринович. Комикс</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="icon" href="../пав.jpg">
+        <style>
+            .open {
+                position: relative;
+            }
+
+            .mickey {
+                width: 100%;
+                display: block;
+            }
+
+            .first, .second, .third, .fourth {
+                opacity: 0;
+                transition: opacity 1s ease;
+                pointer-events: none;
+                position: absolute;
+                background-color: white;
+                border: 1px solid white;
+                border-radius: 50%;
+                z-index: 2; 
+            }
+
+            .first {
+                height: 30px;
+                width: 65px;
+                left: 1100px;
+                top: 330px;
+                transition-delay: 1s;
+            }
+
+            .second {
+                height: 34px;
+                width: 65px;
+                left: 1150px;
+                top: 310px;
+                transition-delay: 2s;
+            }
+
+            .third {
+                height: 34px;
+                width: 65px;
+                left: 1200px;
+                top: 290px;
+                transition-delay: 3s;
+            }
+
+            .fourth {
+                height: 100px;
+                width: 210px;
+                left: 1250px;
+                top: 245px;
+                text-align: center;
+                vertical-align: middle;
+                box-sizing: border-box;
+                padding-top: 20px;
+                transition-delay: 4s;
+            }
+
+            .open:hover .first,
+            .open:hover .second,
+            .open:hover .third,
+            .open:hover .fourth {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 4
+            <hr>
+        </header>
+        <main>
+            <div class="open">
+                <img class="mickey" src="mickey.jpg">
+                <div class="first"></div>
+                <div class="second"></div>
+                <div class="third"></div>
+                <div class="fourth">Нельзя сомневаться. Сомнения порождают хаос и ведут тебя к гибели</div>
+            </div>
+        </main>
+
+        <footer>
+            <hr>
+            &copy; Максим Гришти, ФБИ-33, 2 курс, 2025
+        </footer>
+    </body>
+</html>
