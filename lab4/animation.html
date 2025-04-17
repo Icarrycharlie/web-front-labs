@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Гришти Макcим Деринович. Анимация</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="icon" href="../пав.jpg">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                font-family: Arial, sans-serif;
+                overflow: hidden;
+                position: relative;
+                background-color: white;
+            }
+            .tag {
+                position: absolute;
+                font-weight: bold;
+                cursor: pointer;
+                transition: transform 0.3s, text-shadow 0.3s;
+                z-index: 0;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+                animation-direction: alternate;
+            }
+            .tag:hover {
+                transform: scale(2);
+                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+                z-index: 10;
+                animation-play-state: paused;
+            }
+    
+            .t1  { font-size: 18px; color: #884EA0; animation-name: move1; }
+            .t2  { font-size: 26px; color: #3498DB; animation-name: move2; }
+            .t3  { font-size: 22px; color: #1ABC9C; animation-name: move3; }
+            .t4  { font-size: 30px; color: #F39C12; animation-name: move4; }
+            .t5  { font-size: 20px; color: #E74C3C; animation-name: move5; }
+            .t6  { font-size: 24px; color: #2ECC71; animation-name: move6; }
+            .t7  { font-size: 19px; color: #F1C40F; animation-name: move7; }
+            .t8  { font-size: 21px; color: #7F8C8D; animation-name: move8; }
+            .t9  { font-size: 23px; color: #34495E; animation-name: move9; }
+            .t10 { font-size: 20px; color: #D35400; animation-name: move10; }
+            .t11 { font-size: 25px; color: #A93226; animation-name: move11; }
+            .t12 { font-size: 28px; color: #5D6D7E; animation-name: move12; }
+            .t13 { font-size: 19px; color: #1F618D; animation-name: move13; }
+            .t14 { font-size: 22px; color: #27AE60; animation-name: move14; }
+            .t15 { font-size: 24px; color: #B03A2E; animation-name: move15; }
+    
+            @keyframes move1  { 0% { top:5%; left:10%; } 100% { top:20%; left:25%; } }
+            @keyframes move2  { 0% { top:15%; left:50%; } 100% { top:35%; left:30%; } }
+            @keyframes move3  { 0% { top:25%; left:70%; } 100% { top:40%; left:60%; } }
+            @keyframes move4  { 0% { top:35%; left:20%; } 100% { top:50%; left:35%; } }
+            @keyframes move5  { 0% { top:45%; left:55%; } 100% { top:60%; left:70%; } }
+            @keyframes move6  { 0% { top:55%; left:75%; } 100% { top:70%; left:60%; } }
+            @keyframes move7  { 0% { top:65%; left:40%; } 100% { top:80%; left:30%; } }
+            @keyframes move8  { 0% { top:10%; left:65%; } 100% { top:25%; left:80%; } }
+            @keyframes move9  { 0% { top:20%; left:85%; } 100% { top:35%; left:70%; } }
+            @keyframes move10 { 0% { top:30%; left:45%; } 100% { top:50%; left:55%; } }
+            @keyframes move11 { 0% { top:40%; left:15%; } 100% { top:60%; left:25%; } }
+            @keyframes move12 { 0% { top:50%; left:35%; } 100% { top:65%; left:50%; } }
+            @keyframes move13 { 0% { top:60%; left:25%; } 100% { top:75%; left:15%; } }
+            @keyframes move14 { 0% { top:70%; left:80%; } 100% { top:85%; left:60%; } }
+            @keyframes move15 { 0% { top:80%; left:50%; } 100% { top:90%; left:70%; } }
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 4
+            <hr>
+        </header>
+        <main>
+            <div class="tag-cloud">
+                <div class="tag t1">Микки Пирсон</div>
+                <div class="tag t2">Рэймонд Смит</div>
+                <div class="tag t3">Тренер</div>
+                <div class="tag t4">Драй Ай</div>
+                <div class="tag t5">Мэттью Бэргер</div>
+                <div class="tag t6">Флетчер</div>
+                <div class="tag t7">Розалинда Пирсон</div>
+                <div class="tag t8">Большой Дэйв</div>
+                <div class="tag t9">Лорд Джордж</div>
+                <div class="tag t10">Аслан</div>
+                <div class="tag t11">Нагх</div>
+                <div class="tag t12">Сухой Глаз</div>
+                <div class="tag t13">Эрни</div>
+                <div class="tag t14">Лора Прессфилд</div>
+                <div class="tag t15">Питер Флетчер</div>
+            </div>
+        </main>
+
+        <footer>
+            <hr>
+            &copy; Максим Гришти, ФБИ-33, 2 курс, 2025
+        </footer>
+    </body>
+</html>
