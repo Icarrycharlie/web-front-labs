@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Гришти Маким Деринович. Облако тегов</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="icon" href="../пав.jpg">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                font-family: Arial, sans-serif;
+                position: relative;
+                overflow: hidden;
+            }
+            .tag {
+                position: absolute;
+                font-weight: bold;
+                cursor: pointer;
+                transition: transform 0.3s, text-shadow 0.3s;
+                z-index: 0;
+            }
+            .tag:hover {
+                transform: scale(2);
+                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+                z-index: 10;
+            }
+            .t1  { top: 25%; left: 20%; font-size: 18px; color: #884EA0; transform: rotate(-10deg); }        
+            .t2  { top: 30%; left: 35%; font-size: 26px; color: #3498DB; transform: rotate(5deg); }        
+            .t3  { top: 35%; left: 50%; font-size: 22px; color: #1ABC9C; transform: rotate(-5deg); }       
+            .t4  { top: 40%; left: 65%; font-size: 30px; color: #F39C12; transform: rotate(4deg); }        
+            .t5  { top: 45%; left: 30%; font-size: 20px; color: #E74C3C; transform: rotate(-8deg); }       
+            .t6  { top: 50%; left: 45%; font-size: 24px; color: #2ECC71; transform: rotate(6deg); }        
+            .t7  { top: 55%; left: 60%; font-size: 19px; color: #F1C40F; transform: rotate(-6deg); }          
+            .t8  { top: 28%; left: 55%; font-size: 21px; color: #7F8C8D; transform: rotate(10deg); }       
+            .t9  { top: 33%; left: 25%; font-size: 23px; color: #34495E; transform: rotate(-7deg); }       
+            .t10 { top: 38%; left: 40%; font-size: 20px; color: #D35400; transform: rotate(9deg); }        
+            .t11 { top: 43%; left: 55%; font-size: 25px; color: #A93226; transform: rotate(-9deg); }       
+            .t12 { top: 48%; left: 70%; font-size: 28px; color: #5D6D7E; transform: rotate(7deg); }        
+            .t13 { top: 53%; left: 35%; font-size: 19px; color: #1F618D; transform: rotate(-4deg); }       
+            .t14 { top: 58%; left: 50%; font-size: 22px; color: #27AE60; transform: rotate(6deg); }        
+            .t15 { top: 63%; left: 65%; font-size: 24px; color: #B03A2E; transform: rotate(-6deg); }
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 4
+            <hr>
+        </header>
+        <main>
+            <div class="tag-cloud">
+                <div class="tag t1">Микки Пирсон</div>
+                <div class="tag t2">Рэймонд Смит</div>
+                <div class="tag t3">Тренер</div>
+                <div class="tag t4">Драй Ай</div>
+                <div class="tag t5">Мэттью Бэргер</div>
+                <div class="tag t6">Флетчер</div>
+                <div class="tag t7">Розалинда Пирсон</div>
+                <div class="tag t8">Большой Дэйв</div>
+                <div class="tag t9">Лорд Джордж</div>
+                <div class="tag t10">Аслан</div>
+                <div class="tag t11">Нагх</div>
+                <div class="tag t12">Сухой Глаз</div>
+                <div class="tag t13">Эрни</div>
+                <div class="tag t14">Лора Прессфилд</div>
+                <div class="tag t15">Питер Флетчер</div>
+            </div>
+        </main>
+
+        <footer>
+            <hr>
+            &copy; Максим Гришти, ФБИ-33, 2 курс, 2025
+        </footer>
+    </body>
+</html>
