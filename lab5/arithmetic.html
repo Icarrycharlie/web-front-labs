@@ -23,6 +23,24 @@
                 let max = 'Добро пожаловать на мою страницу. \nСчастья вам и здоровья';
                 alert(max)
             }
+            function razn() {
+                let inputA=document.getElementById('numberA');
+                let inputB=document.getElementById('numberB');
+
+                let a = parseInt(inputA.value);
+                let b = parseInt(inputB.value);
+                let result = a - b;
+                alert ('Разность ' + a + ' и ' + b + ' равна ' + result);
+            }
+            function proiz() {
+                let inputA=document.getElementById('numberA');
+                let inputB=document.getElementById('numberB');
+
+                let a = parseInt(inputA.value);
+                let b = parseInt(inputB.value);
+                let result = a * b;
+                alert ('Произведение ' + a + ' и ' + b + ' равна ' + result);
+            }
         </script>
         <style>
             .messege {
@@ -51,6 +69,8 @@
             <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
             <div class="messege" onclick="showSum()">Найти сумму чисел</div>
             <div class="messege" onclick="showAuthor()">Сколько будет 5154+7891?</div>
+            <div class="messege" onclick="razn()">Найти разность</div>
+            <div class="messege" onclick="proiz()">Найти произведение</div>
         </main>
 
         <footer style="cursor: pointer;" ondblclick="Max()">
