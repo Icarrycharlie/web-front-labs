@@ -41,6 +41,11 @@
                 document.getElementById('saturateOutput').innerText = value;
                 document.getElementById('Image_7').style.filter = 'saturate(' + value + ')';
             }
+            function sepiaChange() {
+                let value = document.getElementById('sepiaValue').value + '%';
+                document.getElementById('sepiaOutput').innerText = value;
+                document.getElementById('Image_8').style.filter = 'sepia(' + value + ')';
+            }
         </script>
         <style>
             div {
@@ -95,7 +100,13 @@
                 Фильтр saturate:
                 <input type="range" min="0" max="500" value="100" onchange="saturateChange()" id="saturateValue">
                 <span id="saturateOutput">100%</span>
-                <div><img src="Mickey.webp" id="Image_7" width="500"></div>
+                <div><img src="Mickey.webp" id="Image_7" width="300"></div>
+            </div>
+            <div>
+                Фильтр sepia:
+                <input type="range" min="0" max="100" value="0" onchange="sepiaChange()" id="sepiaValue">
+                <span id="sepiaOutput">0%</span>
+                <div><img src="Mickey.webp" id="Image_8" width="300"></div>
             </div>
         </main>
 
