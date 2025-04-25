@@ -108,6 +108,16 @@
                 let result = a**b;
                 alert (a+' в степени '+ b +' равно ' + result);
             }
+            function changeOutput(buttonNum, backColor, textColor, borderStyle, borderRadius, borderWidth, borderColor) {
+                let output=document.getElementById('output');
+                output.innerHTML= 'Нажата кнопка '+ buttonNum;
+                output.style.backgroundColor= backColor;
+                output.style.color= textColor;
+                output.style.borderStyle= borderStyle;
+                output.style.borderRadius= borderRadius;
+                output.style.borderWidth= borderWidth;
+                output.style.borderColor= borderColor; 
+            }
         </script>
         <style>
             .messege {
@@ -122,6 +132,11 @@
             }
             div {
                 margin-left: 15px;
+            }
+            .output {
+                border: 1px solid;
+                width: 300px;
+                height: 40px;
             }
         </style>
     </head>
@@ -140,6 +155,13 @@
             <div class="messege" onclick="proiz()">Найти произведение</div>
             <div class="messege" onclick="showDiv()">Найти отношение чисел</div>
             <div class="messege" onclick="step()">Возведение в степень</div>
+            <div>
+                <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'lime', 'red', 'solid', '10px', '3px', 'black')">
+                <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'black', 'blue', 'dashed', '20px', '4px', 'cyan')">
+                <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'blue', 'white', 'dotted', '5px', '2px', 'white')">
+                <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'white', 'purple', 'double', '15px', '6px', 'green')">
+            </div>
+            <div id="output"></div>
         </main>
 
         <footer style="cursor: pointer;" ondblclick="Max()">
