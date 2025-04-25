@@ -9,7 +9,6 @@
             function showSum() {
                 let inputA=document.getElementById('numberA');
                 let inputB=document.getElementById('numberB');
-
                 let a = parseInt(inputA.value);
                 let b = parseInt(inputB.value);
                 let result = a + b;
@@ -26,7 +25,6 @@
             function razn() {
                 let inputA=document.getElementById('numberA');
                 let inputB=document.getElementById('numberB');
-
                 let a = parseInt(inputA.value);
                 let b = parseInt(inputB.value);
                 let result = a - b;
@@ -35,11 +33,42 @@
             function proiz() {
                 let inputA=document.getElementById('numberA');
                 let inputB=document.getElementById('numberB');
-
                 let a = parseInt(inputA.value);
                 let b = parseInt(inputB.value);
                 let result = a * b;
                 alert ('Произведение ' + a + ' и ' + b + ' равна ' + result);
+            }
+            function showDiv() {
+                let inputA=document.getElementById('numberA');
+                let inputB=document.getElementById('numberB');
+                let a = parseInt(inputA.value);
+                let b = parseInt(inputB.value);
+                if (b==0) {
+                    alert('На ноль делить нельзя!');
+                    inputB.focus();
+                    inputB.select();
+                    inputB.style.color = 'black';
+                    inputB.style.backgroundColor = 'red';
+                    return;
+                }
+                if (isNaN(a)) {
+                    alert('Введите числовое значение в первое поле');
+                    inputA.style.color = 'black';
+                    inputA.style.backgroundColor = 'red';
+                    return;
+                }
+                if (isNaN(b)) {
+                    alert('Введите числовое значение во второе поле');
+                    inputB.style.color = 'black';
+                    inputB.style.backgroundColor = 'red';
+                    return;
+                }
+                inputA.style.color = '';
+                inputA.style.backgroundColor = '';
+                inputB.style.color = '';
+                inputB.style.backgroundColor = '';
+                let result = a/b;
+                alert (a + ' / ' + b + ' = ' + result);
             }
         </script>
         <style>
@@ -71,6 +100,7 @@
             <div class="messege" onclick="showAuthor()">Сколько будет 5154+7891?</div>
             <div class="messege" onclick="razn()">Найти разность</div>
             <div class="messege" onclick="proiz()">Найти произведение</div>
+            <div class="messege" onclick="showDiv()">Найти отношение чисел</div>
         </main>
 
         <footer style="cursor: pointer;" ondblclick="Max()">
