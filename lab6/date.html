@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Гришти Макcим Деринович. Дата-время</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="icon" href="../пав.jpg">
+        <script>
+            function showDate() {
+                const locales = [
+                    {name: 'русской', code: 'ru-RU'},
+                    {name: 'американской', code: 'en-US'},
+                    {name: 'немецкой', code: 'de-DE'},
+                    {name: 'японской', code: 'ja-JP'},
+                    {name: 'французской', code: 'fr-FR'}
+                ];
+
+                let output = '';
+                const today = new Date();
+                
+                locales.forEach(locale => {
+                    const options = {
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit',
+                        hour12: false
+                    };
+                    
+                    const dateTime = today.toLocaleString(locale.code, options);
+                    output += `
+                        <div class="date-block">
+                            Дата и время для ${locale.name} локали: 
+                            ${dateTime.replace(', ', ', ')}
+                        </div>
+                    `;
+                });
+
+                document.getElementById('current-date').innerHTML = output;
+            }
+        </script>
+        <style>
+            .date-block {
+                margin: 15px 0;
+                padding: 15px;
+                border-left: 4px solid red;
+                background: #f8f9fa;
+                border-radius: 6px;
+                box-shadow: 0 2px 4px rgb(19, 19, 104);
+            }
+        </style>
+    </head>
+    
+    <body onload="showDate()">
+        <header>
+            НГТУ, ФБ, Лабораторная работа 6
+            <hr>
+        </header>
+        <main>
+            <div id="current-date"></div>
+        </main>
+        <footer>
+            <hr>
+            &copy; Максим Гришти, ФБИ-33, 2 курс, 2025
+        </footer>
+    </body>
+</html>
