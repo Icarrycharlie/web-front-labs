@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Гришти Макcим Деринович. Книги</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="icon" href="../пав.jpg">
+        <script src="books.js"></script>
+         <script>
+        function showBooks() {
+            const bookList = document.getElementById('bookList');
+            bookList.innerHTML = '';
+            
+            for(let i = 0; i < books.length; i++) {
+                const book = books[i];
+                const classes = [
+                    'book-item',
+                    book.bestseller ? 'bestseller' : '',
+                    !book.available ? 'out-of-stock' : ''
+                ].join(' ');
+
+                bookList.innerHTML += `
+                    <div class="${classes}">
+                        <div>
+                            <b>${book.author}.</b>
+                            <i>${book.name}.</i>
+                            &mdash; ${book.publicationYear}
+                            <span class="price">${book.price} ₽</span>
+                        </div>
+                        ${book.bestseller ? 
+                            '<div class="book-meta">🌟 Бестселлер</div>' : ''}
+                    </div>
+                `;
+            }
+        }
+    </script>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin: 30px 0;
+            font-family: 'Arial', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        #bookList {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .book-item {
+            background: #ffffff;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid transparent;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .bestseller {
+            border-left-color: #ff9f43;
+            background: linear-gradient(to right, #fff9f2 97%, #ff9f43 100%);
+        }
+
+        .bestseller::before {
+            color: #ff9f43;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.8em;
+            opacity: 0.3;
+        }
+
+        .out-of-stock {
+            position: relative;
+            background: #f8f9fa;
+        }
+
+        .out-of-stock::after {
+            content: "Нет в наличии";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .price {
+            color: #2ecc71;
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-left: 15px;
+            padding: 4px 12px;
+            background: #e8faf0;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .book-meta {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #6c757d;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .book-item i {
+            color: #495057;
+            font-size: 0.95em;
+        }
+
+        .book-item b {
+            color: #212529;
+            font-size: 1.05em;
+        }
+
+        .book-item > div:first-child {
+            margin-bottom: 8px;
+        }
+
+        .book-meta::before {
+            content: "🔖";
+            font-size: 1.2em;
+            opacity: 0.7;
+        }
+</style>
+    </head>
+    
+    <body onload="showBooks()">
+        <header>
+            НГТУ, ФБ, Лабораторная работа 6
+            <hr>
+        </header>
+        <main>
+            <h1>Список книг</h1>
+            <div id="bookList">
+            </div>
+        </main>
+
+        <footer>
+            <hr>
+            &copy; Максим Гришти, ФБИ-33, 2 курс, 2025
+        </footer>
+    </body>
+</html>
