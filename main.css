@@ -3,6 +3,7 @@ body {
     color: maroon;
     font-family: arial;
     margin: 0px;
+    margin-left: 10px;
 }
 header {
     background-color: darkblue;

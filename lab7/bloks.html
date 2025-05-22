@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Гришти Макcим Деринович. Добавление блоков</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="icon" href="../пав.jpg">
+        <script>
+            function addNewBlock() {
+            let newBlock = document.createElement('div');
+            newBlock.style.backgroundColor = 'green';
+            newBlock.style.height = '40px';
+            newBlock.style.width = '300px';
+            newBlock.style.border = '2px solid black';
+            newBlock.style.margin = '10px 0';
+            newBlock.style.padding = '5px';
+            newBlock.style.boxSizing = 'border-box';
+
+            document.querySelector('main').appendChild(newBlock);
+        }
+    </script>
+</head>
+<body>
+    <header>НГТУ, ФБ, Лабораторная работа 7</header>
+
+    <main>
+        <button onclick="addNewBlock()">Добавить блок</button>
+    </main>
+
+        <footer>
+            <hr>
+            &copy; Максим Гришти, ФБИ-33, 2 курс, 2025
+        </footer>
+    </body>
+</html>
