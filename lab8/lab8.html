@@ -27,8 +27,8 @@
                 <hr>
                 <h2>Цветы</h2>
                 <ul>
-                    <li v-for="flower in flowers">
-                        {{ flower }}
+                    <li v-for="(flower, id) in flowers">
+                        {{ flower }} <button @click="edit(id, flower)">?</button>
                     </li>
                 </ul>
                 <hr>
@@ -57,11 +57,15 @@
                 methods: {
                     incCounter() {
                         this.counter++;
+                    },
+                    decCounter() {
+                        this.counter--;
+                    },
+                    edit(id, flower) {
+                        let newName = prompt('Введите имя цветка:', flower);
+                        this.flowers[id] = newName;
                     }
-                },
-                decCounter() {
-                    this.counter--;
-                },
+                }
             }).mount('#app')
         </script>
     </body>
